@@ -1,0 +1,59 @@
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  S3Bucket:
+    Description: "Name of the S3 Bucket where your Lambda code is stored"
+    Type: String
+  S3Key:
+    Description: "The zip file your Lambda code is stored in"
+    Type: String
+  ModuleName:
+    Description: "The name of the Lambda module"
+    Type: String
+Resources:
+  CustomResource:
+    Type: "Custom::MyCustomResource"
+    Properties:
+      ServiceToken: !GetAtt CustomResourceLambdaFunction.Arn
+      Region: !Ref "AWS::Region"
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        {
+          "Version": "2012-10-17",
+          "Statement": [{
+              "Effect": "Allow",
+              "Principal": {"Service": ["lambda.amazonaws.com"]},
+              "Action": ["sts:AssumeRole"]
+          }]
+        }
+      Path:
+        "/"
+      Policies:
+        - {
+          "PolicyName": "root",
+          "PolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [{
+                "Effect": "Allow",
+                "Action": ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"],
+                "Resource": "arn:aws:logs:*:*:*"
+            },
+            ]
+          }
+        }
+  CustomResourceLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: !Ref S3Bucket
+        S3Key: !Ref S3Key
+      Handler: !Join 
+        - ""
+        - - !Ref ModuleName
+          - "::"
+          - !Ref ModuleName
+          - ".Function::FunctionHandler"
+      Runtime: "dotnetcore2.0"
+      Timeout: 180
+      Role: !GetAtt LambdaExecutionRole.Arn

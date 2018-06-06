@@ -1,0 +1,11 @@
+/Users/stufox/Documents/code/CFN-CustomResource/src/CFN-CustomResource/bin/Debug/netcoreapp2.0/CFN-CustomResource.deps.json
+/Users/stufox/Documents/code/CFN-CustomResource/src/CFN-CustomResource/bin/Debug/netcoreapp2.0/CFN-CustomResource.runtimeconfig.json
+/Users/stufox/Documents/code/CFN-CustomResource/src/CFN-CustomResource/bin/Debug/netcoreapp2.0/CFN-CustomResource.runtimeconfig.dev.json
+/Users/stufox/Documents/code/CFN-CustomResource/src/CFN-CustomResource/bin/Debug/netcoreapp2.0/CFN-CustomResource.dll
+/Users/stufox/Documents/code/CFN-CustomResource/src/CFN-CustomResource/bin/Debug/netcoreapp2.0/CFN-CustomResource.pdb
+/Users/stufox/Documents/code/CFN-CustomResource/src/CFN-CustomResource/obj/Debug/netcoreapp2.0/CFN-CustomResource.csprojResolveAssemblyReference.cache
+/Users/stufox/Documents/code/CFN-CustomResource/src/CFN-CustomResource/obj/Debug/netcoreapp2.0/CFN-CustomResource.csproj.CoreCompileInputs.cache
+/Users/stufox/Documents/code/CFN-CustomResource/src/CFN-CustomResource/obj/Debug/netcoreapp2.0/CFN-CustomResource.AssemblyInfoInputs.cache
+/Users/stufox/Documents/code/CFN-CustomResource/src/CFN-CustomResource/obj/Debug/netcoreapp2.0/CFN-CustomResource.AssemblyInfo.cs
+/Users/stufox/Documents/code/CFN-CustomResource/src/CFN-CustomResource/obj/Debug/netcoreapp2.0/CFN-CustomResource.dll
+/Users/stufox/Documents/code/CFN-CustomResource/src/CFN-CustomResource/obj/Debug/netcoreapp2.0/CFN-CustomResource.pdb
