@@ -25,3 +25,5 @@ Package function into a deployment package
 ```
 
 You'll need to upload the zip file to an S3 bucket, and then provide the bucket name and the file name (including .zip) as input parameters to the CloudFormation deployment.
+
+Note to real developers: I'm not a developer, so please be kind.
