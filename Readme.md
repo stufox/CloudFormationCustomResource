@@ -1,4 +1,4 @@
-# AWS Lambda CloudFormation c# Custom Resource Project
+# AWS Lambda CloudFormation C# Custom Resource Project
 
 This starter project consists of:
 * Function.cs - class file containing a class with a single function handler method
